@@ -1,6 +1,8 @@
-import read_mnist
-from hpelm import ELM
 import numpy as np
+
+from hpelm import ELM
+
+import read_mnist
 from hog_descriptor import *
 
 
@@ -39,4 +41,4 @@ def main(model_path):
 
 
 if __name__ == '__main__':
-  main('./elm.model')
+  main('./models/elm.model')

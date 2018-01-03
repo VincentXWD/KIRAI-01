@@ -1,9 +1,10 @@
 # -*- coding:utf-8 -*-
-from hpelm import ELM
-import read_mnist
 import numpy as np
-from hog_descriptor import *
 
+from hpelm import ELM
+
+import read_mnist
+from src.hog_descriptor import *
 
 
 def model_training(model_path):
@@ -22,4 +23,4 @@ def model_training(model_path):
   elm.save(model_path)
 
 
-model_training('./elm.model')
+model_training('./models/elm.model')

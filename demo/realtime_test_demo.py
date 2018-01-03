@@ -1,11 +1,12 @@
-import pygame
-from pygame.locals import *
 import math
-import cv2
-from hpelm import ELM
-import read_mnist
-import hog_descriptor
 import numpy as np
+
+import cv2
+import pygame
+from hpelm import ELM
+from pygame.locals import *
+
+from src import hog_descriptor
 
 IMG_PATH = './resource/test_num.png'
 elm = None
@@ -14,7 +15,7 @@ class Brush():
   def __init__(self, screen):
     self.screen = screen
     self.color = (255, 255, 255)
-    self.size = 8
+    self.size = 7
     self.drawing = False
     self.last_pos = None
     self.space = 1
@@ -123,8 +124,10 @@ def predictor_init(model_path):
 
 def get_image(img_path):
   image = cv2.imread(img_path)
+  image = cv2.blur(image, (21,21))
   image = cv2.resize(image, (28, 28), interpolation=cv2.INTER_AREA)
   _, image = cv2.threshold(image, 80, 255, cv2.THRESH_BINARY)
+  image = cv2.blur(image, (2,2))
   return image
 
 
@@ -146,6 +149,6 @@ def predict(img_path):
 
 
 if __name__ == '__main__':
-  elm = predictor_init('./elm.model')
+  elm = predictor_init('./models/elm.model')
   app = Painter()
   app.run()

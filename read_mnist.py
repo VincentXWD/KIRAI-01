@@ -1,6 +1,8 @@
 import os
 import struct
 import numpy as np
+from PIL import Image
+import cv2
 
 def load_mnist(path, kind='train'):
 	"""Load MNIST data from `path`"""
@@ -16,5 +18,15 @@ def load_mnist(path, kind='train'):
 
 	return images, labels
 
-# Usage :
-# images, labels = load_mnist('./data')
+
+def handle_label(label):
+  ret = [0 for _ in range(10)]
+  ret[label] = 1.0
+  return ret
+
+
+def up_to_2D(vec):
+  tmp = np.mat(vec).reshape(28, 28)
+  # img = Image.fromarray(tmp.astype(np.uint8))
+  # _, img = cv2.threshold(np.mat(img), 80, 255, cv2.THRESH_BINARY)
+  return tmp

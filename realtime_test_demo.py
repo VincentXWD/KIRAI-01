@@ -14,7 +14,7 @@ class Brush():
   def __init__(self, screen):
     self.screen = screen
     self.color = (255, 255, 255)
-    self.size = 1
+    self.size = 8
     self.drawing = False
     self.last_pos = None
     self.space = 1
@@ -102,6 +102,9 @@ class Painter():
             pygame.image.save(self.screen, IMG_PATH)
             print 'Image saved. now predicting: '
             print 'Well, I guess the number is :', predict(IMG_PATH)
+          elif event.key == K_q:
+            pygame.quit()
+            exit()
 
         elif event.type == MOUSEBUTTONDOWN:
           self.brush.start_draw(event.pos)
@@ -135,7 +138,7 @@ def get_labels(result):
 
 def predict(img_path):
   image = get_image(img_path)
-  # cv2.imwrite('test.png', image)
+  cv2.imwrite('test.png', image)
   img_hog = hog_descriptor.get_hog(image)
   img_hog = np.array(img_hog).T
 

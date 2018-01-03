@@ -21,6 +21,7 @@ def main(model_path):
   labels = np.mat(map(read_mnist.handle_label, labels))
 
   elm = ELM(images.shape[1], labels.shape[1])
+  # print images.shape[1], images.shape[1]
   elm.load(model_path)
   results = elm.predict(images)
 
@@ -36,5 +37,6 @@ def main(model_path):
   print 'TOT :', tot
   print 'ACC : ', str(float(yes)/tot*100.0)+'%'
 
-# if __name__ == 'main':
-main('./elm.model')
+
+if __name__ == '__main__':
+  main('./elm.model')

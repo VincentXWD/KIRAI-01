@@ -27,6 +27,6 @@ def handle_label(label):
 
 def up_to_2D(vec):
   tmp = np.mat(vec).reshape(28, 28)
-  # img = Image.fromarray(tmp.astype(np.uint8))
-  # _, img = cv2.threshold(np.mat(img), 80, 255, cv2.THRESH_BINARY)
-  return tmp
+  img = Image.fromarray(tmp.astype(np.uint8))
+  _, img = cv2.threshold(np.mat(img), 80, 255, cv2.THRESH_BINARY)
+  return img

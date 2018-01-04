@@ -17,8 +17,10 @@ def model_training(model_path):
   labels = np.mat(map(read_mnist.handle_label, labels))
 
   elm = ELM(images.shape[1], labels.shape[1])
+  elm.add_neurons(300, 'sigm')
   elm.add_neurons(300, 'tanh')
-  elm.add_neurons(300, 'rbf_l2')
+  # elm.add_neurons(int(images.shape[1]*0.8), 'sigm')
+  # elm.add_neurons(int(images.shape[1]*0.6), 'tanh')
   elm.train(images, labels)
   elm.save(model_path)
 

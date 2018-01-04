@@ -102,11 +102,15 @@ class Painter():
           elif event.key == K_s:
             pygame.image.save(self.screen, IMG_PATH)
             print 'Image saved. now predicting: '
-            print 'Well, I guess the number is :', predict(IMG_PATH)
+            num = predict(IMG_PATH)
+            if num == -1:
+              print 'Cannot recognize.'
+            else:
+              print 'Well, I guess the number is :', num
+
           elif event.key == K_q:
             pygame.quit()
             exit()
-
         elif event.type == MOUSEBUTTONDOWN:
           self.brush.start_draw(event.pos)
         elif event.type == MOUSEMOTION:
@@ -124,27 +128,35 @@ def predictor_init(model_path):
 
 def get_image(img_path):
   image = cv2.imread(img_path)
-  image = cv2.blur(image, (21,21))
-  image = cv2.resize(image, (28, 28), interpolation=cv2.INTER_AREA)
   _, image = cv2.threshold(image, 80, 255, cv2.THRESH_BINARY)
-  image = cv2.blur(image, (2,2))
+  cv2.blur(image, (1,1))
+  image = cv2.resize(image, (28, 28), interpolation=cv2.INTER_NEAREST)
   return image
 
 
 def get_labels(result):
   ret, id = 0, 0
+  # print result
   for i in range(0, len(result)):
     if ret < result[i]:
       id, ret = i, result[i]
-  return id
+  if ret > 0.5:
+    return id
+  return -1
+
+
+def pre_process(img):
+  # todo:
+  pass
 
 
 def predict(img_path):
   image = get_image(img_path)
+  image = pre_process(img)
+
   cv2.imwrite('test.png', image)
   img_hog = hog_descriptor.get_hog(image)
-  img_hog = np.array(img_hog).T
-
+  img_hog = np.array(img_hog).transpose()
   return get_labels(elm.predict(img_hog)[0])
 
 

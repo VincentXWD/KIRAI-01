@@ -174,3 +174,6 @@ def run(model_path='../models/elm.model'):
   elm = predictor_init(model_path)
   app = Painter()
   app.run()
+
+if __name__ == '__main__':
+  run('../models/elm_1000.model')

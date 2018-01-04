@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 import numpy as np
-
+import datetime
 from hpelm import ELM
 
 import read_mnist
@@ -24,8 +24,11 @@ def model_training(model_path, data_path, neurons=300):
   elm.train(images, labels)
   elm.save(model_path)
 
-def training(model_path='./models/elm.model', data_path='./data/', neurons=300):
+def training(model_path='../models/elm.model', data_path='../data/', neurons=300):
+  begin = datetime.datetime.now()
   model_training(model_path, data_path, neurons)
+  end = datetime.datetime.now()
+  print 'time costing :', (end-begin).seconds, ' second(s)'
 
 if __name__ == '__main__':
   training()

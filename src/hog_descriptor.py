@@ -20,4 +20,6 @@ def get_hog(img):
   hog = cv2.HOGDescriptor(winSize, blockSize, blockStride, cellSize, nbins, derivAperture, winSigma,
                           histogramNormType, L2HysThreshold, gammaCorrection, nlevels)
   hist = hog.compute(img,winStride,padding)
+
   return hist
+

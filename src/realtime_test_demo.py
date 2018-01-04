@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import math
 import numpy as np
+from PIL import Image
 
 import cv2
 import pygame
@@ -165,6 +166,7 @@ def predict(img_path):
   cv2.imwrite('../test.png', image)
   img_hog = hog_descriptor.get_hog(image)
   img_hog = np.array(img_hog).transpose()
+  # print img_hog
   tmp = elm.predict(img_hog)[0]
   return get_labels(tmp)
 

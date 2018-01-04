@@ -32,5 +32,6 @@ def up_to_2D(vec):
   _, img = cv2.threshold(np.mat(img), 80, 255, cv2.THRESH_BINARY)
   return img
 
+
 if __name__ == '__main__':
-  load_mnist('./data/')
+  load_mnist('../data/')

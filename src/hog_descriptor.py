@@ -15,7 +15,7 @@ nlevels = 64
 winStride = (1,1)
 padding = (0,0)
 
-
+cv2.createLBPHFaceRecognizer()
 def get_hog(img):
   hog = cv2.HOGDescriptor(winSize, blockSize, blockStride, cellSize, nbins, derivAperture, winSigma,
                           histogramNormType, L2HysThreshold, gammaCorrection, nlevels)

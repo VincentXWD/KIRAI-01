@@ -1,6 +1,8 @@
-import model_training
-import t10k_test_demo
 import datetime
+
+import model_training
+from demos import t10k_test_demo
+
 
 def experiment(lo, hi, step=50):
   result = []

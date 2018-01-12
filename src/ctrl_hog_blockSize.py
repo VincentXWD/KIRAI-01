@@ -4,16 +4,16 @@ import hog_descriptor
 import model_training
 import t10k_test_demo
 
-nbins = [8, 9, 18, 24, 32, 64, 128]
+blockSize = [7, 14, 28]
 
 def experiment():
   result = []
-  for n in nbins:
+  for b in blockSize:
     time = 3
     tot = 0.0
-    print 'now nbins is ', n
+    print 'now block size is ', b
     while time > 0:
-      hog_descriptor.nbins = n
+      # hog_descriptor.blockSize = b
       begin = datetime.datetime.now()
       model_training.training(model_path='../models/elm.model',
                               data_path='../data/')
@@ -24,7 +24,7 @@ def experiment():
   return result
 
 
-def write_file(content, fpath, fname='nbins_ctrl_HOG'):
+def write_file(content, fpath, fname='blocksize_ctrl_HOG'):
   with open(fpath+fname, 'w') as fp:
     for line in content:
       fp.writelines(str(line)+'\n')

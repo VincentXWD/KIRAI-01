@@ -28,7 +28,6 @@ class Brush():
     self.brush = pygame.image.load("../resource/brush.png").convert_alpha()
     self.brush_now = self.brush.subsurface((0, 0), (1, 1))
 
-
   def start_draw(self, pos):
     self.drawing = True
     self.last_pos = pos
@@ -149,7 +148,7 @@ def get_labels(result):
   for i in range(0, len(result)):
     if ret < result[i]:
       id, ret = i, result[i]
-  if ret > 0.5:
+  if ret > 0.1:
     return id
   return -1
 

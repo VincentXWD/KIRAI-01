@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63d20769-6841-46bc-8e3d-358570dbd07a" name="Default" comment="update">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/exp_data/acfun_ctrl_ELM.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ctrl_hog_blockSize.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/lbp_descriptor.py" afterPath="$PROJECT_DIR$/src/haar_descriptor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resource/test_num.png" afterPath="$PROJECT_DIR$/resource/test_num.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.png" afterPath="$PROJECT_DIR$/test.png" />
+    <list default="true" id="63d20769-6841-46bc-8e3d-358570dbd07a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exp_data/neurons_ctrl_HOG.txt" afterPath="$PROJECT_DIR$/exp_data/neurons_ctrl_HOG.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/elm.model" afterPath="$PROJECT_DIR$/models/elm.model" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ctrl_hog_nbins.py" afterPath="$PROJECT_DIR$/src/ctrl_hog_nbins.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ctrl_neurons.py" afterPath="$PROJECT_DIR$/src/ctrl_neurons.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hog_descriptor.py" afterPath="$PROJECT_DIR$/src/hog_descriptor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model_training.py" afterPath="$PROJECT_DIR$/src/model_training.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/realtime_test_demo.py" afterPath="$PROJECT_DIR$/src/realtime_test_demo.py" />
     </list>
     <ignored path="mnist.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -687,7 +675,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515057010291</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1515748202154</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1515748202154</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -776,6 +771,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#35#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -791,6 +789,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#35#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -806,6 +807,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#35#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -975,6 +979,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -982,6 +987,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3240">
           <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#35#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1001,6 +1009,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1008,6 +1019,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
